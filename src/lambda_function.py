@@ -21,6 +21,7 @@ def build_response(status_code, body):
 
 
 def lambda_handler(event, context):
+    print("CI/CD sanity test: deployed from GitHub Actions")
     # Create the DynamoDB resource at runtime (important for moto tests)
     dynamodb = boto3.resource("dynamodb", region_name=os.environ.get("AWS_REGION", "eu-north-1"))
     table = dynamodb.Table(TABLE_NAME)
