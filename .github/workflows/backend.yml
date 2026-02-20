@@ -47,6 +47,6 @@ jobs:
             --stack-name cloud-resume-backend \
             --region eu-north-1 \
             --capabilities CAPABILITY_IAM \
+            --resolve-s3 \
             --no-confirm-changeset \
             --no-fail-on-empty-changeset
-
